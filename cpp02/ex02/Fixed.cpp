@@ -6,7 +6,7 @@
 /*   By: ahusic <ahusic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 22:08:12 by ahusic            #+#    #+#             */
-/*   Updated: 2024/11/13 22:47:01 by ahusic           ###   ########.fr       */
+/*   Updated: 2024/11/13 22:49:54 by ahusic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -185,4 +185,3 @@ const Fixed	&Fixed::max(const Fixed &a, const Fixed &b)
 {
 	return a.getRawBits() > b.getRawBits() ? a : b;
 }
-
