@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahusic <ahusic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/14 15:21:29 by ahusic            #+#    #+#             */
-/*   Updated: 2024/11/15 18:59:52 by ahusic           ###   ########.fr       */
+/*   Created: 2024/11/15 18:59:35 by ahusic            #+#    #+#             */
+/*   Updated: 2024/11/15 19:37:54 by ahusic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ ClapTrap	&ClapTrap::operator=(const ClapTrap &other)
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "[ClapTrap] " << _name << " had been destroyed." << std::endl;
+	std::cout << "[ClapTrap] " << _name << " has been destroyed." << std::endl;
 }
 
 void	ClapTrap::attack(std::string const &target)
