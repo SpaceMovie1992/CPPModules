@@ -5,16 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahusic <ahusic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/15 19:58:49 by ahusic            #+#    #+#             */
-/*   Updated: 2024/11/16 18:38:50 by ahusic           ###   ########.fr       */
+/*   Created: 2024/11/15 20:51:25 by ahusic            #+#    #+#             */
+/*   Updated: 2024/11/16 20:59:52 by ahusic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 # include "ClapTrap.hpp"
+# include <string>
 
-class	ScavTrap : public ClapTrap
+class	ScavTrap : virtual public ClapTrap
 {
 public:
 	ScavTrap(std::string name);
