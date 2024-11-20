@@ -6,7 +6,7 @@
 /*   By: ahusic <ahusic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 18:28:45 by ahusic            #+#    #+#             */
-/*   Updated: 2024/11/17 18:30:02 by ahusic           ###   ########.fr       */
+/*   Updated: 2024/11/20 22:46:43 by ahusic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,12 @@ protected:
 
 public:
 	Animal();
-	Animal(std::string type);
-	Animal(const Animal &copy);
-	Animal &operator=(const Animal &copy);
+	Animal(const Animal &other);
+	Animal &operator=(const Animal &other);
 	virtual ~Animal();
 
 	std::string getType() const;
-	virtual void makeSound() const = 0;
+	virtual void makeSound() const;
 };
 
 #endif // ANIMAL_HPP
