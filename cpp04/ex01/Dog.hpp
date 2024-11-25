@@ -6,7 +6,7 @@
 /*   By: ahusic <ahusic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 22:58:42 by ahusic            #+#    #+#             */
-/*   Updated: 2024/11/20 22:58:48 by ahusic           ###   ########.fr       */
+/*   Updated: 2024/11/22 18:32:00 by ahusic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define DOG_HPP
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class	Dog : public Animal
 {
@@ -24,6 +25,9 @@ public:
 	Dog &operator=(const Dog &other);
 
 	void makeSound() const;
+
+private:
+	Brain *brain;
 };
 
 #endif // DOG_HPP

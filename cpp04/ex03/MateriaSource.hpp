@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahusic <ahusic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/20 22:59:16 by ahusic            #+#    #+#             */
-/*   Updated: 2024/11/22 18:42:07 by ahusic           ###   ########.fr       */
+/*   Created: 2024/11/24 20:58:19 by ahusic            #+#    #+#             */
+/*   Updated: 2024/11/24 20:59:06 by ahusic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#ifndef MATERIASOURCE_HPP
+# define MATERIASOURCE_HPP
 
-#include "Animal.hpp"
-#include "Brain.hpp"
+# include "IMateriaSource.hpp"
 
-class	Cat : public Animal
+class	MateriaSource : public IMateriaSource
 {
-public:
-	Cat();
-	~Cat();
-	Cat(const Cat &other);
-	Cat &operator=(const Cat &other);
-
-	void makeSound() const;
-
 private:
-	Brain *brain;
+	AMateria	*_materia[4];
+
+public:
+	MateriaSource();
+	MateriaSource(const MateriaSource &other);
+	MateriaSource &operator=(const MateriaSource &other);
+	~MateriaSource();
+
+	void learnMateria(AMateria *m);
+	AMateria *createMateria(std::string const &type);
 };
 
-#endif // CAT_HPP
+#endif // MATERIASOURCE_HPP

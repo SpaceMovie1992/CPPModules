@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahusic <ahusic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/20 22:59:16 by ahusic            #+#    #+#             */
-/*   Updated: 2024/11/22 18:42:07 by ahusic           ###   ########.fr       */
+/*   Created: 2024/11/24 17:17:51 by ahusic            #+#    #+#             */
+/*   Updated: 2024/11/24 20:56:50 by ahusic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#ifndef ICE_HPP
+# define ICE_HPP
 
-#include "Animal.hpp"
-#include "Brain.hpp"
+# include "AMateria.hpp"
 
-class	Cat : public Animal
+class	Ice : public AMateria
 {
 public:
-	Cat();
-	~Cat();
-	Cat(const Cat &other);
-	Cat &operator=(const Cat &other);
+	Ice();
+	Ice(const Ice &other);
+	Ice &operator=(const Ice &other);
+	~Ice();
 
-	void makeSound() const;
-
-private:
-	Brain *brain;
+	Ice *clone() const;
+	void use(ICharacter &target);
 };
 
-#endif // CAT_HPP
+#endif // ICE_HPP

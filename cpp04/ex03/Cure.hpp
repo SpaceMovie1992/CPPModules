@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Cure.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahusic <ahusic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/20 22:59:16 by ahusic            #+#    #+#             */
-/*   Updated: 2024/11/22 18:42:07 by ahusic           ###   ########.fr       */
+/*   Created: 2024/11/24 17:19:09 by ahusic            #+#    #+#             */
+/*   Updated: 2024/11/24 17:19:18 by ahusic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#ifndef CURE_HPP
+# define CURE_HPP
 
-#include "Animal.hpp"
-#include "Brain.hpp"
+# include "AMateria.hpp"
 
-class	Cat : public Animal
+class	Cure : public AMateria
 {
 public:
-	Cat();
-	~Cat();
-	Cat(const Cat &other);
-	Cat &operator=(const Cat &other);
+	Cure();
+	Cure(const Cure &other);
+	Cure &operator=(const Cure &other);
+	~Cure();
 
-	void makeSound() const;
-
-private:
-	Brain *brain;
+	Cure *clone() const;
+	void use(ICharacter &target);
 };
 
-#endif // CAT_HPP
+#endif // CURE_HPP

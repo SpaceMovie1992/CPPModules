@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahusic <ahusic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/20 22:59:16 by ahusic            #+#    #+#             */
-/*   Updated: 2024/11/22 18:42:07 by ahusic           ###   ########.fr       */
+/*   Created: 2024/11/23 20:19:49 by ahusic            #+#    #+#             */
+/*   Updated: 2024/11/23 20:23:39 by ahusic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#include "Dog.hpp"
+#include "Cat.hpp"
 
-#include "Animal.hpp"
-#include "Brain.hpp"
-
-class	Cat : public Animal
+int	main()
 {
-public:
-	Cat();
-	~Cat();
-	Cat(const Cat &other);
-	Cat &operator=(const Cat &other);
+	const Animal* j = new Dog();
+	const Animal* i = new Cat();
 
-	void makeSound() const;
+	std::cout << "---------------------------------" << std::endl;
 
-private:
-	Brain *brain;
-};
+	std::cout << j->getType() << " " << std::endl;
+	std::cout << i->getType() << " " << std::endl;
 
-#endif // CAT_HPP
+	j->makeSound();
+	i->makeSound();
+
+	delete j;
+	delete i;
+
+	std::cout << "---------------------------------" << std::endl;
+	return (0);
+}
